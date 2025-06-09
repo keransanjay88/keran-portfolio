@@ -81,53 +81,43 @@ const ContactSection = () => {
           </div>
 
           <div className={styles.formCol}>
-            <div className={styles.formContainer}>
-              <h3 className={styles.formTitle}>Send a Message</h3>
-
-              <div className={styles.formGroup}>
-                <div className={styles.inputGroup}>
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    className={styles.input}
-                  />
-                  <div className={styles.inputUnderline}></div>
-                </div>
-
-                <div className={styles.inputGroup}>
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    className={styles.input}
-                  />
-                  <div className={styles.inputUnderline}></div>
-                </div>
-
-                <div className={styles.inputGroup}>
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    className={styles.input}
-                  />
-                  <div className={styles.inputUnderline}></div>
-                </div>
-
-                <div className={styles.inputGroup}>
-                  <textarea
-                    placeholder="Your message"
-                    className={styles.textarea}
-                  ></textarea>
-                  <div className={styles.inputUnderline}></div>
-                </div>
+            <form onSubmit={handleSubmit}>
+              <div className={styles.inputGroup}>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  required
+                  className={styles.input}
+                />
+                <div className={styles.inputUnderline}></div>
               </div>
 
-              <button
-                onClick={handleSubmit}
-                className={styles.submitButton}
-              >
+              <div className={styles.inputGroup}>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  required
+                  className={styles.input}
+                />
+                <div className={styles.inputUnderline}></div>
+              </div>
+
+              <div className={styles.inputGroup}>
+                <textarea
+                  placeholder="Your Message"
+                  required
+                  className={`${styles.input} ${styles.textarea}`}
+                ></textarea>
+                <div className={styles.inputUnderline}></div>
+              </div>
+
+              <button type="submit" className={styles.submitButton}>
                 Send Message
+                <svg xmlns="http://www.w3.org/2000/svg" className={styles.sendIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>

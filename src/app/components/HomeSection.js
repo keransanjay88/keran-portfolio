@@ -32,25 +32,33 @@ const HomeSection = ({ setCurrentSection, mousePosition }) => {
                 <p className={styles.description}>
                   Computer and Communication Engineering graduate with expertise in
                   Java development, cybersecurity, and web technologies. Passionate about
-                  creating secure, innovative solutions through careful code craftsmanship.
-                </p>
+                  creating secure, innovative solutions through careful code craftsmanship.                </p>
               </div>
 
-              <div className={styles.buttonGroup}>
-                <button
-                  onClick={() => setCurrentSection('work')}
-                  className={styles.primaryButton}
-                >
-                  <span className={styles.buttonText}>View Projects</span>
-                  <div className={styles.buttonBackground}></div>
-                </button>
+              <div className={styles.buttonGroup}>                <button
+                onClick={() => setCurrentSection('work')}
+                className={styles.primaryButton}
+              >
+                <span className={styles.buttonText}>
+                  View Projects
+                  <svg className={styles.buttonIcon} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7l4-4m0 0l4 4m-4-4v18" />
+                  </svg>
+                </span>
+                <div className={styles.buttonBackground}></div>
+              </button>
 
                 <button
                   onClick={() => setCurrentSection('contact')}
                   className={styles.secondaryButton}
                 >
-                  <span>Begin conversation →</span>
-                  <div className={styles.ctaUnderline}></div>
+                  <span className={styles.buttonText}>
+                    Begin Conversation
+                    <svg className={styles.buttonIcon} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                    </svg>
+                  </span>
+                  <div className={styles.buttonBackground}></div>
                 </button>
               </div>
             </div>
