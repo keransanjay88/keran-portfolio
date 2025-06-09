@@ -44,7 +44,7 @@ const AboutSection = () => {
               </p>
               <p>
                 I believe in continuous learning and practical application. Through internships,
-                certifications, and hands-on projects, I've developed expertise in multiple
+                certifications, and hands-on projects, I&apos;ve developed expertise in multiple
                 domains while maintaining focus on security and user experience.
               </p>
               <p>
