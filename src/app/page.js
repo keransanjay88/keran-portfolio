@@ -35,7 +35,7 @@ export default function Portfolio() {
 
     window.addEventListener('mousemove', handleMouseMove)
     window.addEventListener('scroll', handleScroll)
-    
+
     return () => {
       window.removeEventListener('mousemove', handleMouseMove)
       window.removeEventListener('scroll', handleScroll)
@@ -50,14 +50,14 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gradient-to-b from-amber-50 via-orange-50 to-red-50 text-gray-900 overflow-x-hidden">
       <BackgroundElements />
       <Navigation currentSection={currentSection} setCurrentSection={setCurrentSection} />
-      
+
       <div className="pt-28">
         {currentSection === 'home' && <HomeSection setCurrentSection={setCurrentSection} mousePosition={mousePosition} />}
-        {currentSection === 'work' && <WorkSection scrollY={scrollY} />}
+        {currentSection === 'work' && <WorkSection scrollY={scrollY} mousePosition={mousePosition} />}
         {currentSection === 'about' && <AboutSection />}
         {currentSection === 'contact' && <ContactSection scrollY={scrollY} />}
       </div>
-      
+
       <Footer />
     </div>
   )

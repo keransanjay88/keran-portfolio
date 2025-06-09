@@ -2,7 +2,7 @@
 import React from 'react'
 import styles from './WorkSection.module.css'
 
-const WorkSection = ({ scrollY }) => {
+const WorkSection = ({ scrollY, mousePosition }) => {
   const projects = [
     {
       id: 1,
@@ -66,65 +66,72 @@ const WorkSection = ({ scrollY }) => {
             <div key={project.id}>
               <div className={styles.projectGroup}>
                 <div className={`${styles.projectImageContainer} ${index % 2 === 1 ? styles.projectImageOrder2 : ''}`}>
-                  <div className={`${styles.projectImageContainer} group-hover:${styles.projectImageContainerHover}`}>
+                  <div className={`${styles.imageBackground} ${styles[project.element + 'Landscape']}`}>
                     {project.element === 'voice' && (
                       <>
-                        <div className={styles.voiceElement}>
-                          {[...Array(6)].map((_, i) => (
-                            <div
-                              key={i}
-                              className={styles.voiceWave}
-                              style={{
-                                top: `${40 + i * 4}%`,
-                                width: `${60 + Math.sin(i) * 20}%`,
-                                opacity: 0.4 - i * 0.05
-                              }}
-                            />
-                          ))}
-                          <div className={styles.voiceIcon}>🎤</div>
+                        {/* Northern Lights Landscape */}
+                        <div className={styles.auroraContainer}>
+                          <div className={styles.aurora1}></div>
+                          <div className={styles.aurora2}></div>
+                          <div className={styles.aurora3}></div>
                         </div>
+                        <div className={styles.starField}></div>
+                        <div className={styles.snowMountains}></div>
+                        <div className={styles.moon}
+                          style={{
+                            transform: `translate(${mousePosition?.x * 20}px, ${mousePosition?.y * 20}px)`
+                          }}
+                        ></div>
                       </>
                     )}
 
                     {project.element === 'mobile' && (
                       <>
-                        <div className={styles.mobileElement}>
-                          <div className={styles.mobileDevice}></div>
-                          <div className={styles.mobileScreen}></div>
-                          <div className={styles.mobileLine1}></div>
-                          <div className={styles.mobileLine2}></div>
-                          <div className={styles.mobileIcon}>📱</div>
+                        {/* Japanese Garden Landscape */}
+                        <div className={styles.sunsetSky}></div>
+                        <div className={styles.pagoda}></div>
+                        <div className={styles.cherryTrees}>
+                          {[...Array(3)].map((_, i) => (
+                            <div key={i} className={styles.cherryTree}>
+                              <div className={styles.treeBranches}></div>
+                              {[...Array(5)].map((_, j) => (
+                                <div key={j} className={styles.cherryBlossom}>🌸</div>
+                              ))}
+                            </div>
+                          ))}
                         </div>
+                        <div className={styles.pond}></div>
                       </>
                     )}
 
                     {project.element === 'ml' && (
                       <>
-                        <div className={styles.mlElement}>
-                          <div className={styles.mlBar1}></div>
-                          <div className={styles.mlBar2}></div>
-                          <div className={styles.mlBar3}></div>
-                          <div className={styles.mlBar4}></div>
-                          <div className={styles.mlIcon}>🧠</div>
+                        {/* Desert Night Landscape */}
+                        <div className={styles.nightSky}></div>
+                        <div className={styles.stars}></div>
+                        <div className={styles.shootingStar}></div>
+                        <div className={styles.desertDunes}></div>
+                        <div className={styles.cacti}>
+                          {[...Array(3)].map((_, i) => (
+                            <div key={i} className={styles.cactus}></div>
+                          ))}
                         </div>
                       </>
                     )}
 
                     {project.element === 'security' && (
                       <>
-                        <div className={styles.securityElement}>
-                          <div className={styles.securityDot1}></div>
-                          <div className={styles.securityDot2}></div>
-                          <div className={styles.securityDot3}></div>
-                          <div className={styles.securityLine1}></div>
-                          <div className={styles.securityLine2}></div>
-                          <div className={styles.securityIcon}>🛡️</div>
+                        {/* Mountain Fortress Landscape */}
+                        <div className={styles.stormyClouds}></div>
+                        <div className={styles.lightningFlash}></div>
+                        <div className={styles.fortressMountain}></div>
+                        <div className={styles.waterfalls}>
+                          {[...Array(2)].map((_, i) => (
+                            <div key={i} className={styles.waterfall}></div>
+                          ))}
                         </div>
                       </>
                     )}
-                    <div className={styles.seasonTag}>
-                      {project.season}
-                    </div>
                   </div>
                 </div>
 
