@@ -24,8 +24,8 @@ const ContactSection = () => {
                 </div>
 
                 <p className={styles.text}>
-                  I'm seeking challenging opportunities to leverage my skills in Java development,
-                  cybersecurity, and innovative technology solutions. Let's discuss how we can
+                  I&apos;m seeking challenging opportunities to leverage my skills in Java development,
+                  cybersecurity, and innovative technology solutions. Let&apos;s discuss how we can
                   create meaningful impact together.
                 </p>
               </div>
