@@ -1,0 +1,400 @@
+.section {
+    padding: 6rem 3rem;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.headerSubtitle {
+    color: rgb(75, 85, 99);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
+.headerTitle {
+    font-size: 2.25rem;
+    font-weight: 200;
+    color: rgb(31, 41, 55);
+}
+
+.headerDivider {
+    width: 6rem;
+    height: 0.5rem;
+    margin: 1.5rem auto;
+    background: linear-gradient(to right, transparent, rgb(75, 85, 99), transparent);
+    transform: skew(-6deg);
+    opacity: 0.6;
+}
+
+.projectsGrid {
+    display: grid;
+    gap: 8rem;
+}
+
+.projectGroup {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 4rem;
+    align-items: center;
+}
+
+.projectImageContainer {
+    grid-column: span 8 / span 8;
+    aspect-ratio: 4/3;
+    background: linear-gradient(to bottom right, rgb(254, 243, 199), rgb(254, 226, 226), rgb(254, 202, 202));
+    border: 1px solid rgb(229, 231, 235);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.7s ease;
+}
+
+.projectImageContainerHover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.projectImageOrder2 {
+    order: 2;
+}
+
+.projectContent {
+    grid-column: span 4 / span 4;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projectContentOrder1 {
+    order: 1;
+}
+
+.projectMeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectYear {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: rgb(107, 114, 128);
+    letter-spacing: 0.05em;
+}
+
+.projectSeason {
+    font-size: 0.75rem;
+    opacity: 0.4;
+    letter-spacing: 0.05em;
+}
+
+.projectTitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(31, 41, 55);
+    line-height: 1.25;
+    margin-bottom: 1rem;
+}
+
+.projectDescription {
+    color: rgb(75, 85, 99);
+    line-height: 2;
+    font-weight: 300;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.techTag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background-color: rgb(229, 231, 235);
+    color: rgb(55, 65, 81);
+    border-radius: 0.25rem;
+}
+
+.projectDivider {
+    width: 2rem;
+    height: 1px;
+    background: linear-gradient(to right, rgb(75, 85, 99), transparent);
+}
+
+.projectLinks {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.75rem;
+}
+
+.projectLink {
+    font-weight: 300;
+    color: rgb(31, 41, 55);
+    letter-spacing: 0.05em;
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.projectLink:hover {
+    color: rgb(75, 85, 99);
+}
+
+.projectLinkUnderline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: rgb(75, 85, 99);
+    transition: width 0.5s ease;
+}
+
+.projectLink:hover .projectLinkUnderline {
+    width: 100%;
+}
+
+.sourceLink {
+    font-weight: 300;
+    color: rgb(107, 114, 128);
+    letter-spacing: 0.05em;
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.sourceLink:hover {
+    color: rgb(31, 41, 55);
+}
+
+.sourceLink .projectLinkUnderline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: rgb(75, 85, 99);
+    transition: width 0.5s ease;
+}
+
+.sourceLink:hover .projectLinkUnderline {
+    width: 100%;
+}
+
+/* Project element styles */
+.voiceElement {
+    background: linear-gradient(to bottom, rgba(237, 233, 254, 0.3), rgba(219, 234, 254, 0.2));
+}
+
+.voiceWave {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: rgba(167, 139, 250, 0.2);
+    left: 10%;
+}
+
+.voiceIcon {
+    position: absolute;
+    top: 33.333333%;
+    right: 25%;
+    font-size: 2.25rem;
+    opacity: 0.5;
+}
+
+.mobileElement {
+    background: linear-gradient(to bottom right, rgba(219, 234, 254, 0.4), rgba(207, 250, 254, 0.3));
+}
+
+.mobileDevice {
+    position: absolute;
+    top: 25%;
+    left: 33.333333%;
+    width: 4rem;
+    height: 6rem;
+    border: 2px solid rgb(156, 163, 175);
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.mobileScreen {
+    position: absolute;
+    top: 33.333333%;
+    left: 33.333333%;
+    width: 4rem;
+    height: 1px;
+    background: rgba(96, 165, 250, 0.6);
+    border-radius: 9999px;
+}
+
+.mobileLine1 {
+    position: absolute;
+    top: 40%;
+    left: 33.333333%;
+    width: 3rem;
+    height: 1px;
+    background: rgba(156, 163, 175, 0.4);
+}
+
+.mobileLine2 {
+    position: absolute;
+    bottom: 33.333333%;
+    left: 33.333333%;
+    width: 2.5rem;
+    height: 1px;
+    background: rgba(156, 163, 175, 0.4);
+}
+
+.mobileIcon {
+    position: absolute;
+    bottom: 25%;
+    right: 25%;
+    font-size: 1.5rem;
+    opacity: 0.4;
+}
+
+.mlElement {
+    background: linear-gradient(to bottom, rgba(167, 243, 208, 0.4), rgba(153, 246, 228, 0.3));
+}
+
+.mlBar1 {
+    position: absolute;
+    bottom: 33.333333%;
+    left: 25%;
+    width: 1px;
+    height: 4rem;
+    background: rgba(52, 211, 153, 0.6);
+}
+
+.mlBar2 {
+    position: absolute;
+    bottom: 33.333333%;
+    left: 33.333333%;
+    width: 1px;
+    height: 5rem;
+    background: rgba(16, 185, 129, 0.6);
+}
+
+.mlBar3 {
+    position: absolute;
+    bottom: 33.333333%;
+    left: 40%;
+    width: 1px;
+    height: 3rem;
+    background: rgba(52, 211, 153, 0.6);
+}
+
+.mlBar4 {
+    position: absolute;
+    bottom: 33.333333%;
+    right: 33.333333%;
+    width: 1px;
+    height: 4.5rem;
+    background: rgba(16, 185, 129, 0.6);
+}
+
+.mlIcon {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    font-size: 1.875rem;
+    opacity: 0.4;
+}
+
+.securityElement {
+    background: linear-gradient(to bottom, rgba(254, 226, 226, 0.4), rgba(253, 186, 116, 0.3));
+}
+
+.securityDot1 {
+    position: absolute;
+    top: 33.333333%;
+    left: 25%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: rgba(239, 68, 68, 0.6);
+    border-radius: 9999px;
+}
+
+.securityDot2 {
+    position: absolute;
+    top: 50%;
+    left: 33.333333%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: rgba(249, 115, 22, 0.6);
+    border-radius: 9999px;
+}
+
+.securityDot3 {
+    position: absolute;
+    bottom: 33.333333%;
+    right: 33.333333%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: rgba(239, 68, 68, 0.6);
+    border-radius: 9999px;
+}
+
+.securityLine1 {
+    position: absolute;
+    top: 33.333333%;
+    left: 25%;
+    width: 2rem;
+    height: 1px;
+    background: rgba(239, 68, 68, 0.4);
+    transform: rotate(45deg);
+}
+
+.securityLine2 {
+    position: absolute;
+    top: 50%;
+    left: 33.333333%;
+    width: 3rem;
+    height: 1px;
+    background: rgba(249, 115, 22, 0.4);
+    transform: rotate(-12deg);
+}
+
+.securityIcon {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    font-size: 1.875rem;
+    opacity: 0.4;
+}
+
+.seasonTag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.4;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 1024px) {
+    .projectGroup {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .projectImageContainer,
+    .projectContent {
+        grid-column: span 1;
+    }
+
+    .projectImageOrder2,
+    .projectContentOrder1 {
+        order: 0;
+    }
+}

@@ -1,0 +1,81 @@
+.loadingContainer {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to bottom, #fffbeb, #ffecd1, #ffd4d4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loaderWrapper {
+    position: relative;
+}
+
+.circleContainer {
+    width: 96px;
+    height: 96px;
+    position: relative;
+}
+
+.outerCircle {
+    position: absolute;
+    inset: 0;
+    border: 1px solid #9ca3af;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: pulse 2s infinite;
+}
+
+.innerCircle {
+    position: absolute;
+    inset: 8px;
+    border: 1px solid #4b5563;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: pulse 3s infinite;
+    animation-delay: 0.5s;
+}
+
+.centerDot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #1f2937;
+    border-radius: 50%;
+}
+
+.loadingText {
+    position: absolute;
+    bottom: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.loadingText div {
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+}

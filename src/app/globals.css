@@ -1,26 +1,368 @@
-@import "tailwindcss";
+/* Essential global styles */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: linear-gradient(to bottom, #fffbeb, #fed7aa, #fecaca);
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Disabled link pointer events for placeholder links */
+a[href="#"] {
+  cursor: default;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Utility animation classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
+/* Animation delays */
+.animation-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Loading screen styles */
+.loading-circle {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Japanese-style input focus effects */
+.japanese-input {
+  position: relative;
+}
+
+.japanese-input::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(to right, #374151, #6b7280);
+  transition: width 0.7s ease;
+}
+
+.japanese-input:focus-within::after {
+  width: 100%;
+}
+
+/* Zen circle styles */
+.zen-circle {
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid #9ca3af;
+}
+
+.zen-circle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #374151;
+  border-radius: 50%;
+}
+
+/* Brush stroke effects */
+.brush-stroke {
+  background: linear-gradient(to right, #374151, #6b7280, #9ca3af);
+  transform: skewX(-12deg);
+  opacity: 0.6;
+}
+
+/* Ink wash cloud effects */
+.ink-wash {
+  background: radial-gradient(circle, rgba(156, 163, 175, 0.15) 0%, rgba(209, 213, 219, 0.08) 50%, transparent 100%);
+  border-radius: 50%;
+}
+
+/* Mountain silhouette styles */
+.mountain-silhouette {
+  background: linear-gradient(to top, rgba(156, 163, 175, 0.3) 0%, transparent 100%);
+}
+
+/* Traditional painting frame */
+.painting-frame {
+  background: linear-gradient(to bottom right, #fef3c7, #fed7aa, #fecaca);
+  border: 1px solid #d1d5db;
+}
+
+/* Floating elements */
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating:nth-child(odd) {
+  animation-delay: -3s;
+}
+
+/* Text gradient effects */
+.text-gradient {
+  background: linear-gradient(to right, #374151, #6b7280);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hover glow effects */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(107, 114, 128, 0.3);
+}
+
+/* Section fade-in on scroll */
+.section-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+  .mobile-center {
+    text-align: center;
+  }
+
+  .mobile-full {
+    width: 100%;
+  }
+
+  .mobile-spacing {
+    padding: 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .print-hidden {
+    display: none !important;
+  }
+}
+
+/* Dark mode support (future enhancement) */
+@media (prefers-color-scheme: dark) {
+  /* .dark-mode-support removed: empty ruleset */
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .high-contrast {
+    border: 2px solid;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* GPU acceleration for smooth animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Custom utilities for Japanese aesthetic */
+.traditional-border {
+  border: 1px solid #d1d5db;
+  position: relative;
+}
+
+.traditional-border::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(209, 213, 219, 0.5);
+  pointer-events: none;
+}
+
+/* Zen spacing utilities */
+.zen-spacing-sm {
+  margin: 0.5rem 0;
+}
+
+.zen-spacing-md {
+  margin: 1rem 0;
+}
+
+.zen-spacing-lg {
+  margin: 2rem 0;
+}
+
+.zen-spacing-xl {
+  margin: 4rem 0;
 }

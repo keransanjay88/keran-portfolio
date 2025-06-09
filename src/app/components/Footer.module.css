@@ -1,0 +1,52 @@
+.footer {
+    border-top: 1px solid rgb(229, 231, 235);
+    padding: 4rem 3rem;
+    background: linear-gradient(to top, rgba(254, 243, 199, 0.2), transparent);
+}
+
+.container {
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: rgb(75, 85, 99);
+    letter-spacing: 0.05em;
+}
+
+.signature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.square {
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 1px solid rgb(156, 163, 175);
+}
+
+.dot1 {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: rgb(75, 85, 99);
+}
+
+.dot2 {
+    width: 0.25rem;
+    height: 0.25rem;
+    background-color: rgb(31, 41, 55);
+}
+
+.initials {
+    color: rgb(75, 85, 99);
+    font-size: 0.875rem;
+}

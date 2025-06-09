@@ -1,0 +1,261 @@
+.homeSection {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    position: relative;
+}
+
+.mountainBackground {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.mountainSilhouette {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 16rem;
+    background: linear-gradient(to top, rgba(209, 213, 219, 0.2), transparent);
+}
+
+.mountainPeaks {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8rem;
+    background: linear-gradient(to top, rgba(156, 163, 175, 0.3), transparent);
+    clip-path: polygon(0 100%, 20% 60%, 40% 80%, 60% 40%, 80% 70%, 100% 50%, 100% 100%);
+}
+
+.container {
+    max-width: 72rem;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 5rem;
+    align-items: center;
+}
+
+.contentCol {
+    grid-column: span 7 / span 7;
+}
+
+.imageCol {
+    grid-column: span 5 / span 5;
+}
+
+.welcomeText {
+    color: rgb(75, 85, 99);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
+.heading {
+    font-size: 4.5rem;
+    line-height: 0.9;
+    font-weight: 200;
+    color: rgb(31, 41, 55);
+}
+
+.headingSpan {
+    color: rgb(107, 114, 128);
+}
+
+.developerTag {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0.6;
+}
+
+.tagLine {
+    width: 4rem;
+    height: 0.125rem;
+    background: linear-gradient(to right, rgb(31, 41, 55), rgb(75, 85, 99), rgb(156, 163, 175));
+    transform: skew(-12deg);
+}
+
+.tagText {
+    color: rgb(75, 85, 99);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: rgb(55, 65, 81);
+    line-height: 2;
+    font-weight: 300;
+    max-width: 32rem;
+}
+
+.cta {
+    border: 1px solid rgb(209, 213, 219);
+    padding: 1rem 2rem;
+    font-size: 0.875rem;
+    color: rgb(55, 65, 81);
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.ctaUnderline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgb(31, 41, 55), transparent);
+    transition: width 0.7s ease;
+}
+
+.cta:hover .ctaUnderline {
+    width: 100%;
+}
+
+.imageSquare {
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.imageBackground {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgb(254, 243, 199), rgb(251, 207, 232), rgb(254, 202, 202));
+    border: 1px solid rgb(209, 213, 219);
+    overflow: hidden;
+}
+
+.mountainOverlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 33.333333%;
+    background: linear-gradient(to top, rgba(156, 163, 175, 0.4), rgba(209, 213, 219, 0.2));
+    clip-path: polygon(0 100%, 30% 40%, 70% 60%, 100% 30%, 100% 100%);
+}
+
+.mountainShadow {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(to top, rgba(156, 163, 175, 0.3), rgba(209, 213, 219, 0.15));
+    clip-path: polygon(0 100%, 40% 50%, 80% 70%, 100% 40%, 100% 100%);
+}
+
+.floatingOrb {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    background: radial-gradient(circle, rgba(251, 146, 60, 0.2), rgba(254, 243, 199, 0.1), transparent);
+    border-radius: 9999px;
+    opacity: 0.6;
+    transition: all 2s;
+}
+
+.brushStroke1 {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 6rem;
+    height: 1px;
+    background: linear-gradient(to right, rgb(55, 65, 81), rgb(75, 85, 99));
+    transform: rotate(12deg);
+    transform-origin: left;
+}
+
+.brushStroke2 {
+    position: absolute;
+    top: 25%;
+    left: 33.333333%;
+    width: 4rem;
+    height: 1px;
+    background: linear-gradient(to right, rgb(75, 85, 99), rgb(156, 163, 175));
+    transform: rotate(-6deg);
+    transform-origin: left;
+}
+
+.cherryBlossom1 {
+    position: absolute;
+    top: 25%;
+    left: 33.333333%;
+    color: rgb(249, 168, 212);
+    opacity: 0.7;
+}
+
+.cherryBlossom2 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    color: rgb(249, 168, 212);
+    opacity: 0.5;
+    font-size: 0.875rem;
+}
+
+.decorativeLines {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.line1 {
+    width: 2rem;
+    height: 1px;
+    background: rgba(156, 163, 175, 0.4);
+    margin-bottom: 0.25rem;
+}
+
+.line2 {
+    width: 3rem;
+    height: 1px;
+    background: rgba(156, 163, 175, 0.3);
+    margin-bottom: 0.25rem;
+}
+
+.line3 {
+    width: 1.5rem;
+    height: 1px;
+    background: rgba(156, 163, 175, 0.2);
+}
+
+.decorativeSymbol1 {
+    position: absolute;
+    top: 33.333333%;
+    right: 33.333333%;
+    color: rgb(75, 85, 99);
+    opacity: 0.4;
+    font-size: 0.75rem;
+}
+
+.decorativeSymbol2 {
+    position: absolute;
+    top: 40%;
+    right: 25%;
+    color: rgb(75, 85, 99);
+    opacity: 0.3;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+    .contentCol {
+        grid-column: 1 / -1;
+    }
+
+    .imageCol {
+        grid-column: 1 / -1;
+    }
+}
