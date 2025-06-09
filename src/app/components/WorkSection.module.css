@@ -14,7 +14,7 @@
 }
 
 .headerSubtitle {
-    color: rgb(75, 85, 99);
+    color: #666666;
     font-weight: 300;
     letter-spacing: 0.05em;
     font-size: 0.875rem;
@@ -24,14 +24,14 @@
 .headerTitle {
     font-size: 2.25rem;
     font-weight: 200;
-    color: rgb(31, 41, 55);
+    color: #000000;
 }
 
 .headerDivider {
     width: 6rem;
     height: 0.5rem;
     margin: 1.5rem auto;
-    background: linear-gradient(to right, transparent, rgb(75, 85, 99), transparent);
+    background: linear-gradient(to right, transparent, #333333, transparent);
     transform: skew(-6deg);
     opacity: 0.6;
 }
@@ -51,8 +51,8 @@
 .projectImageContainer {
     grid-column: span 8 / span 8;
     aspect-ratio: 4/3;
-    background: linear-gradient(to bottom right, rgb(254, 243, 199), rgb(254, 226, 226), rgb(254, 202, 202));
-    border: 1px solid rgb(229, 231, 235);
+    background: linear-gradient(to bottom right, #f5f5f5, #e0e0e0, #d4d4d4);
+    border: 1px solid #e5e5e5;
     position: relative;
     overflow: hidden;
     transition: all 0.7s ease;
@@ -86,7 +86,7 @@
 .projectYear {
     font-size: 0.75rem;
     font-weight: 300;
-    color: rgb(107, 114, 128);
+    color: #666666;
     letter-spacing: 0.05em;
 }
 
@@ -99,7 +99,7 @@
 .projectTitle {
     font-size: 1.5rem;
     font-weight: 300;
-    color: rgb(31, 41, 55);
+    color: #000000;
     line-height: 1.25;
     margin-bottom: 1rem;
 }

@@ -1,7 +1,7 @@
 .footer {
-    border-top: 1px solid rgb(229, 231, 235);
+    border-top: 1px solid #e5e5e5;
     padding: 4rem 3rem;
-    background: linear-gradient(to top, rgba(254, 243, 199, 0.2), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.02), transparent);
 }
 
 .container {
@@ -18,7 +18,7 @@
 .copyright {
     font-size: 0.75rem;
     font-weight: 300;
-    color: rgb(75, 85, 99);
+    color: #666666;
     letter-spacing: 0.05em;
 }
 
@@ -31,22 +31,24 @@
 .square {
     width: 0.75rem;
     height: 0.75rem;
-    border: 1px solid rgb(156, 163, 175);
+    border: 1px solid #999999;
 }
 
 .dot1 {
     width: 0.5rem;
     height: 0.5rem;
-    background-color: rgb(75, 85, 99);
+    background-color: #666666;
 }
 
 .dot2 {
     width: 0.25rem;
     height: 0.25rem;
-    background-color: rgb(31, 41, 55);
+    background-color: #333333;
 }
 
 .initials {
-    color: rgb(75, 85, 99);
+    color: #666666;
     font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
 }

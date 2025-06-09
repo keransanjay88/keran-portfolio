@@ -18,7 +18,7 @@
     left: 0;
     right: 0;
     height: 16rem;
-    background: linear-gradient(to top, rgba(209, 213, 219, 0.2), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent);
 }
 
 .mountainPeaks {
@@ -26,7 +26,7 @@
     bottom: 0;
     width: 100%;
     height: 8rem;
-    background: linear-gradient(to top, rgba(156, 163, 175, 0.3), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.15), transparent);
     clip-path: polygon(0 100%, 20% 60%, 40% 80%, 60% 40%, 80% 70%, 100% 50%, 100% 100%);
 }
 
@@ -54,7 +54,7 @@
 }
 
 .welcomeText {
-    color: rgb(75, 85, 99);
+    color: #666666;
     font-weight: 300;
     letter-spacing: 0.05em;
     font-size: 0.875rem;
@@ -65,11 +65,11 @@
     font-size: 4.5rem;
     line-height: 0.9;
     font-weight: 200;
-    color: rgb(31, 41, 55);
+    color: #000000;
 }
 
 .headingSpan {
-    color: rgb(107, 114, 128);
+    color: #333333;
 }
 
 .developerTag {
@@ -82,19 +82,19 @@
 .tagLine {
     width: 4rem;
     height: 0.125rem;
-    background: linear-gradient(to right, rgb(31, 41, 55), rgb(75, 85, 99), rgb(156, 163, 175));
+    background: linear-gradient(to right, #000000, #333333, #666666);
     transform: skew(-12deg);
 }
 
 .tagText {
-    color: rgb(75, 85, 99);
+    color: #333333;
     font-size: 0.75rem;
     letter-spacing: 0.1em;
 }
 
 .description {
     font-size: 1.125rem;
-    color: rgb(55, 65, 81);
+    color: #1a1a1a;
     line-height: 2;
     font-weight: 300;
     max-width: 32rem;

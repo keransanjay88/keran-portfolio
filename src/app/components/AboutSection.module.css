@@ -28,7 +28,7 @@
 }
 
 .subtitle {
-    color: #4b5563;
+    color: #666666;
     font-weight: 300;
     letter-spacing: 0.025em;
     font-size: 0.875rem;
@@ -38,7 +38,7 @@
 .heading {
     font-size: 2.25rem;
     font-weight: 200;
-    color: #1f2937;
+    color: #000000;
 }
 
 .text {
@@ -46,40 +46,36 @@
     margin-bottom: 1.5rem;
     font-size: 1.125rem;
     font-weight: 300;
-    color: #4b5563;
+    color: #333333;
     line-height: 1.75;
 }
 
 .sectionTitle {
-    font-size: 1.25rem;
-    font-weight: 300;
-    color: #1f2937;
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #000000;
     margin-bottom: 2rem;
 }
 
 .timeline {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .timelineItem {
     display: flex;
-    align-items: flex-start;
     gap: 1.5rem;
+    align-items: flex-start;
 }
 
 .timelineIcon {
-    width: 3rem;
-    height: 3rem;
-    border: 1px solid #d1d5db;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #4b5563;
-    font-weight: 300;
+    background: #000000;
+    color: #ffffff;
+    padding: 0.5rem;
     font-size: 0.75rem;
-    letter-spacing: 0.05em;
+    font-weight: 500;
+    border-radius: 0.25rem;
 }
 
 .timelineContent {
@@ -87,16 +83,15 @@
 }
 
 .timelineTitle {
-    font-weight: 300;
-    color: #1f2937;
-    margin-bottom: 0.25rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 0.5rem;
 }
 
 .timelineSubtitle {
-    color: #4b5563;
     font-size: 0.875rem;
-    font-weight: 300;
-    line-height: 1.5;
+    color: #666666;
 }
 
 .certList {
@@ -127,63 +122,56 @@
 .skillsList {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .skillItem {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .skillHeader {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-bottom: 0.75rem;
+    align-items: center;
 }
 
 .skillName {
-    font-weight: 300;
-    color: #1f2937;
-    font-size: 0.875rem;
+    font-weight: 500;
+    color: #000000;
 }
 
 .skillLevel {
-    font-size: 0.75rem;
-    opacity: 0.4;
-    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+    color: #666666;
 }
 
 .skillDescription {
-    font-size: 0.75rem;
-    color: #6b7280;
-    font-weight: 300;
-    font-style: italic;
-    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #333333;
+    line-height: 1.5;
 }
 
 .skillBar {
-    width: 100%;
-    height: 1px;
-    background-color: #e5e7eb;
-    transition: background-color 0.7s ease;
-}
-
-.skillItem:hover .skillBar {
-    background-color: #d1d5db;
+    height: 2px;
+    background: linear-gradient(to right, #000000, #cccccc);
+    margin-top: 0.5rem;
 }
 
 .toolsGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 .toolItem {
-    font-size: 0.75rem;
-    color: #4b5563;
-    font-weight: 300;
-    border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 0.25rem;
+    font-size: 0.875rem;
+    color: #333333;
+    padding: 0.5rem;
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.25rem;
 }
 
 .currentStatus {
